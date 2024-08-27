@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Report Login</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e0f0ec;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .login-container {
+            background-color: white;
+            width: 100%;
+            max-width: 400px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        .login-header {
+            background-color: #d9e8e7;
+            padding: 30px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: #4a4a4a;
+        }
+        .login-header img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px 10px 0 0;
+        }
+        .login-form {
+            padding: 20px;
+        }
+        .login-form label {
+            font-size: 14px;
+            color: #4a4a4a;
+            display: block;
+            margin-bottom: 5px;
+        }
+        .login-form input[type="text"], .login-form input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+            color: #4a4a4a;
+        }
+        .login-form input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        .login-form .checkbox-label {
+            font-size: 12px;
+            color: #4a4a4a;
+        }
+        .login-form button {
+            width: 100%;
+            padding: 12px;
+            background-color: #33cc33;
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .login-form button:hover {
+            background-color: #28a428;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-container">
+        <!-- Bagian atas dengan gambar -->
+        <div class="login-header">
+            <p>E-REPORT</p>
+        </div>
+
+        <!-- Form login -->
+        <div class="login-form">
+            <form id="loginForm">
+                <label for="username">Username</label>
+                <input type="text" id="username" placeholder="Masukkan Username" required>
+
+                <label for="password">Kata Sandi</label>
+                <input type="password" id="password" placeholder="Masukkan Kata Sandi" required>
+
+                <div>
+                    <input type="checkbox" id="rememberMe">
+                    <label for="rememberMe" class="checkbox-label">Remember Me</label>
+                </div>
+
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission
+            // Redirect to the main menu after successful login
+            window.location.href = 'menu.html';
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Menu</title>
+    <style>
+        body {
+            background-color: #ffb3b3;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .menu-container {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        h2 {
+            color: white;
+        }
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 20px;
+            width: 80%;
+        }
+        .menu-item {
+            background-color: #ff4d4d;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        /* Media Queries for smaller devices */
+        @media (max-width: 768px) {
+            .menu-grid {
+                grid-template-columns: 1fr;
+                width: 100%;
+            }
+            .menu-item {
+                padding: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h2 {
+                font-size: 18px;
+            }
+            .menu-item {
+                padding: 10px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="menu-container">
+        <h2>Main Menu</h2>
+        <div class="menu-grid">
+            <div class="menu-item">Order Now</div>
+            <div class="menu-item">Prescriptions</div>
+            <div class="menu-item">Orders</div>
+            <div class="menu-item">Pharmacists</div>
+            <div class="menu-item">Profile</div>
+            <div class="menu-item">Chats</div>
+            <div class="menu-item">Pill Reminder</div>
+        </div>
+    </div>
+</body>
+</html>
